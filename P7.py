@@ -1,4 +1,5 @@
 import math
+import random
 
 class Punto3D:
     def __init__(self, x=0, y=0, z=0):
@@ -33,8 +34,8 @@ class Punto3D:
         distancia_euclidiana = math.sqrt(dx**2 + dy**2 + dz**2)
         return distancia_euclidiana
 
-# Crear arreglo de 10 objetos Punto3D
-puntos = [Punto3D() for _ in range(10)]
+# Crear arreglo de 10 objetos Punto3D con coordenadas aleatorias
+puntos = [Punto3D(random.randint(-10, 10), random.randint(-10, 10), random.randint(-10, 10)) for _ in range(10)]
 
 # Calcular distancias entre todos los puntos y determinar la menor distancia
 menor_distancia = float('inf')  # Inicializar con un valor infinito
